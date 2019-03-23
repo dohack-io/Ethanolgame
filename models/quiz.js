@@ -6,7 +6,7 @@ var con = mysql.createConnection({
     database: "dohack19js"
 });
 
-function inhalt() {
+function bestimmeFrage() {
     con.connect(function (err) {
         if (err) throw err;
         console.log("Connected!");
@@ -24,5 +24,5 @@ function inhalt() {
     return fragen;
 }
 
-module.exports.inhalt = inhalt;
+module.exports.inhalt = bestimmeFrage;
 
