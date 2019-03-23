@@ -17,5 +17,5 @@ con.connect(function (err) {
 });
 
 console.log(fragen);
-module.exports.inhalt = inhalt;
+module.exports.inhalt = fragen;
 
