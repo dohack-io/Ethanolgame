@@ -8,8 +8,11 @@
     <script src="main.js"></script>
 </head>
 <body>
+    <header>
     <h1><%= spieler%> </h1>
     <h2>Dein Glas ist voll! Wähle jemanden aus der Liste, der jetzt trinken muss!</h2>
+    </header>
+    <main>
     <div id="liste">
             <ul>
             <% for (spieler of spielerarray) { %>
@@ -20,5 +23,6 @@
        <div id="auswahl">
             <input type="button" value="Done!" onclick="alert('Punkte vom Spieler werden zurückgesetzt')">         
        </div>
+    </main>
 </body>
 </html>

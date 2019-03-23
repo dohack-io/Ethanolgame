@@ -8,14 +8,18 @@
     <script src="main.js"></script>
 </head>
 <body>
+    <header>
     <h1><%= spieler%> </h1>
     <h2>Wahrheit</h2>
        <div id="wahrheit">
             <p> <%= wahrheit[0]%> </p> 
        </div> 
+    </header>
+    <main>
        <div id="auswahl">
             <input type="button" value="beantwortet" onclick="alert('Punkt für Spieler1')">    
             <input type="button" value="verweigert" onclick="alert('Punktabzug für Spieler1')">      
        </div>
+    </main>
 </body>
 </html>

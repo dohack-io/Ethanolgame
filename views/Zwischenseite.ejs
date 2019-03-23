@@ -5,7 +5,12 @@
     <title>Zwischenseite</title>
 </head>
 <body>  
+    <header>
+    <h1><%= spielstatus%></h1>
+    </header>
+    <main>
     <input type="button" value="Weiter gehts!" onclick="window.location.replace('http://mwegener.com:8040/<%= spielstatus%>')">
-<%- include("./includes/Spielerstatus.ejs") %>
+    <%- include("./includes/Spielerstatus.ejs") %>
+    </main>
 </body>
 </html>

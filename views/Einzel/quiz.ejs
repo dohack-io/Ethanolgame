@@ -10,11 +10,14 @@
 </head>
 
 <body>
+    <header>
     <h1><%= quiz[0]%> </h1>
     <h2>Quiz</h2>
     <div id="frage">
         <p> <%= quiz[1]%> </p>
     </div>
+    </header>
+    <main>
     <div id="antworten">
         <form method="POST" action="http://mwegener.com:8040/quiz/antwortpruefen">
             <input type="submit" value="<%= quiz[2]%>">
@@ -33,6 +36,7 @@
             <input type="text" name="antwort" value="<%= quiz[5]%>" hidden>
         </form>
     </div>
+    </main>
 </body>
 
 </html>
