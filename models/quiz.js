@@ -18,6 +18,8 @@ function bestimmeFrage() {
         fragen = fields;
     });
 
+    //var x = (Math.random() * (max - min)) + min;
+
     console.log(fragen);
     console.log("Test");
 

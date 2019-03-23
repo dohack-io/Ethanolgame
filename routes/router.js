@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const quiz = require("./../models/quiz");
+const quiz = require("./../models/quiz.js");
 
 //Dashboard
 router.get('/',function(req,res,next){
