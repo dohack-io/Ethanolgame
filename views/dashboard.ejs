@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+</head>
+
+<body>
+    <header>
+        <div id="titel">
+            <a href="/"><img src="./img/logo.png" alt="Bild kann nicht angezeigt werden"></a>
+            <h1>Raumverwaltung</h1>
+        </div>
+    </header>
+    <hr>
+    <div id="content">
+        <main>
+            <a href="./neuebuchung">
+                <div id="neuebuchung">
+                    <p>neue Buchung</p>
+                </div>
+            </a>
+            <a href="./buchungdetails">
+                <div id="buchung1">
+                    <p>Buchung 1</p>
+                </div>
+            </a>
+            <a href="./raumliste">
+                <div id="rooms">
+                    <p>Raumliste</p>
+                </div>
+            </a>
+            <a href="./raumdetails">
+                <div id="c131">
+                    <p>C.1.31</p>
+                </div>
+            </a>
+            <a id="add">
+                <div>
+                    <p>+</p>
+                </div>
+            </a>
+        </main>
+    </div>
+    <%- include("includes/footer.ejs") %>
+
+    <script src="./js/dashboard.js"></script>
+
+    </footer>
+</body>
+
+</html>
