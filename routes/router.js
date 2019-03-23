@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const quiz = require("./../models/quiz");
 
 //Dashboard
 router.get('/',function(req,res,next){
@@ -7,7 +8,9 @@ router.get('/',function(req,res,next){
 });
 
 router.get('/fragen',function(req,res,next){
-    res.render("quiz");
+    res.render("quiz",{
+        quiz: quiz.inhalt
+    });
 });
 
 //404

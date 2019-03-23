@@ -6,12 +6,16 @@ var con = mysql.createConnection({
     database: "dohackjs19"
 });
 
+
+var fragen = [];
 con.connect(function (err) {
     if (err) throw err;
     con.query("SELECT * FROM quiz", function (err, result, fields) {
         if (err) throw err;
-        console.log(fields);
+        fragen = fields;
     });
 });
 
-var fragen = [];
+console.log(fragen);
+module.exports.inhalt = inhalt;
+
