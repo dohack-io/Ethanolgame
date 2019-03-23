@@ -25,7 +25,7 @@ function Spieler(name, bildurl) {
 function gibAlleSpielerMitStatus(callback) {
     var erg = [];
 
-    connection.query("SELECT name FROM spieler", function (err, result) {
+    connection.query("SELECT name,bildurl FROM spieler", function (err, result) {
         result.forEach(element => {
             erg.push(new Spieler(element.name, element.bildurl));
         });

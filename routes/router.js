@@ -11,6 +11,7 @@ router.get('/',function(req,res,next){
 //Zwischenseite
 router.get("/zwischenseite",function(req,res,next){
     spieler.gibAlleSpielerMitStatus(function(erg){
+        console.log(erg);
         res.render("Zwischenseite",{
             spielerarray: erg
         })
