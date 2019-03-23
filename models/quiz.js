@@ -7,6 +7,7 @@ var con = mysql.createConnection({
 });
 
 function bestimmeFrage() {
+    console.log("Test1");
     con.connect(function (err) {
         if (err) throw err;
         console.log("Connected!");
