@@ -5,7 +5,7 @@
     <title>Zwischenseite</title>
 </head>
 <body>  
-    <input type="button" value="Weiter gehts!" onclick="alert('Nächste Seite')">
+    <input type="button" value="Weiter gehts!" onclick="window.location.replace('http://mwegener.com:8040/<%= spielstatus%>')">
 <%- include("./includes/Spielerstatus.ejs") %>
 </body>
 </html>
