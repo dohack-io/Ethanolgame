@@ -14,18 +14,15 @@ function bestimmeFrage() {
     });
 
     var fragen = [];
-    con.query("SELECT * FROM quiz", function (err, result, fields) {
+    con.query("SELECT * FROM quiz", function (err, result) {
         if (err) throw err;
-        fragen = fields;
-        console.log(fields);
+        fragen = result;
         console.log(result);
     });
 
     //var x = (Math.random() * (max - min)) + min;
 
     console.log(fragen);
-    console.log("Test");
-
     return fragen;
 }
 
