@@ -7,10 +7,10 @@ router.get('/',function(req,res,next){
     res.render("dashboard");
 });
 
+//quiz
 router.get('/fragen',function(req,res,next){
-    console.log("TestFragen");
     res.render("quiz",{
-        quizarr: quiz.bestimmeFrage
+        quiz: quiz.bestimmeFrage()
     });
 });
 

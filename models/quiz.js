@@ -7,22 +7,22 @@ var con = mysql.createConnection({
 });
 
 function bestimmeFrage() {
+    console.log("Test1");
     con.connect(function (err) {
         if (err) throw err;
         console.log("Connected!");
     });
 
     var fragen = [];
-    con.query("SELECT * FROM quiz", function (err, result, fields) {
+    con.query("SELECT * FROM quiz", function (err, result) {
         if (err) throw err;
-        fragen = fields;
+        fragen = result;
+        console.log(result);
     });
 
     //var x = (Math.random() * (max - min)) + min;
 
     console.log(fragen);
-    console.log("Test");
-
     return fragen;
 }
 
