@@ -2,20 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Spiel</title>
+    <title>Duellauswahl</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
 </head>
 <body>
     <h1><%= spieler[0]%> vs. <%= spieler[1]%> </h1>
-    <h2>Duellspiel</h2>
-       <div id="Duellspiel">
-            <p> <%= Duellspiel[0]%> </p>
-       </div> 
        <div id="Spieler">
-            <input type="button" value=" <%= Spieler[0]%> " onclick="alert('You clicked the button!')">    
-            <input type="button" value=" <%= Spieler[1]%> " onclick="alert('You clicked the button!')"> 
+            <input type="button" value="Spiel" onclick="alert('Spiel wird eingeleitet')">    
+            <input type="button" value="Teamwork" onclick="alert('Teamwork wird eingeleitet')"> 
        </div> 
 </body>
 </html>
