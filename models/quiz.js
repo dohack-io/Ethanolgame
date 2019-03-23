@@ -17,6 +17,7 @@ function bestimmeFrage() {
     con.query("SELECT * FROM quiz", function (err, result, fields) {
         if (err) throw err;
         fragen = fields;
+        console.log(fields);
     });
 
     //var x = (Math.random() * (max - min)) + min;
