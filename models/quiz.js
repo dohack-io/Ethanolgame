@@ -23,11 +23,13 @@ function bestimmeFrage(callback) {
     });
     
     connection.query(
-    	"SELECT frage, aw1, aw2, aw3, aw4 FROM quiz LEFT JOIN spiel_frage ON quiz.id = spiel_frage.idfrage " +
+    	"SELECT id, frage, aw1, aw2, aw3, aw4 FROM quiz LEFT JOIN spiel_frage ON quiz.id = spiel_frage.idfrage " +
     	"WHERE spiel_frage.idfrage IS NULL ",
     	function (err, result) {
     	    if (err) throw err;
-        	var y = (Math.floor(Math.random() * (result.length)));
+            var y = (Math.floor(Math.random() * (result.length)));
+            var aktuelleId = result[y].id;
+            connection.query("UPDATE quiz SET aktiv = 1 WHERE ID = " + aktuelleId);
     		erg[1] = result[y].frage;
     		erg[2] = result[y].aw1;
     		erg[3] = result[y].aw2;
@@ -40,5 +42,24 @@ function bestimmeFrage(callback) {
     );
 }
 
+function antwortpruefen(antwort){
+    connection.query("SELECT richtig FROM quiz WHERE aktiv = 1", function(err,result){
+        connection.query("SELECT punkte FROM spieler WHERE id = (SELECT spielerid FROM spiel_spieler)", function(err,resultpunkte){
+            if (result.richtig == antwort){
+                connection.query(
+                    "UPDATE spieler SET punkte = " + resultpunkte.punkte+1 + " WHERE id = (SELECT spielerid FROM spiel_spieler)");
+            } 
+            else{
+                if (resultpunkte.punkte != 0){
+                    connection.query(
+                        "UPDATE spieler SET punkte = " + resultpunkte.punkte-1 + " WHERE id = (SELECT spielerid FROM spiel_spieler)");
+                }
+            }
+        })
+        
+    })
+}
+
 module.exports.bestimmeFrage = bestimmeFrage;
+module.exports.antwortpruefen = antwortpruefen;
 
