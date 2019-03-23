@@ -12,13 +12,10 @@ con.connect(function(err) {
   });
 
 var fragen = [];
-//con.connect(function (err) {
-   // if (err) throw err;
-   // con.query("SELECT * FROM quiz", function (err, result, fields) {
-   //     if (err) throw err;
-   //     fragen = fields;
-  //  });
-//});
+con.query("SELECT * FROM quiz", function (err, result, fields) {
+   if (err) throw err;
+   fragen = fields;
+});
 
 console.log(fragen);
 module.exports.inhalt = fragen;
