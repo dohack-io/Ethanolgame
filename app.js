@@ -1,9 +1,13 @@
 const express = require("express");
+const bodyParser = require('body-parser');
 const app = express();
 const router= require('./routes/router.js');
 
 app.set("view engine", "ejs");
 app.set("views", "views");
+
+//BodyParser
+app.use(bodyParser.urlencoded({ extended: false }))
 
 //Statischer Inhalt
 app.use(express.static("public"));

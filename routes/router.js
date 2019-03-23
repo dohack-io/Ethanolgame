@@ -3,9 +3,42 @@ const router = express.Router();
 const quiz = require("./../models/quiz");
 const spieler = require("./../models/spieler");
 
-//Dashboard
+//Startseite
 router.get('/',function(req,res,next){
-    res.render("dashboard");
+    res.render("Startbildschirm");
+});
+
+//Zwischenseite
+router.get("/zwischenseite",function(req,res,next){
+    spieler.gibAlleSpielerMitStatus(function(erg){
+        res.render("Zwischenseite",{
+            spielerarray: erg
+        })
+    })
+    
+});
+
+//Benutzer hinzufügen
+router.post("/spielereingabe",function(req,res,next){
+    spieler.spielerAufnehmen(req.body.spielername);
+    res.redirect('back');
+});
+
+
+router.get("/spielereingabe",function(req,res,next){
+    spieler.gibAlleSpieler(function(erg){
+        console.log(erg);
+        res.render("Spielereingabe",{
+            spielerarray: erg
+        });
+    });
+});
+
+
+//Benutzer löschen
+router.post("/spielerloeschen",function(req,res,next){
+    spieler.alleSpielerLoeschen();
+    res.redirect("/spielereingabe");
 });
 
 //quiz
@@ -15,6 +48,11 @@ router.get('/fragen',function(req,res,next){
         quiz: erg
 	});
 });
+});
+
+//Spiel beginnen
+router.get("/zwischenseite",function(req,res,next){
+    res.render("Zwischenseite");
 });
 
 //404

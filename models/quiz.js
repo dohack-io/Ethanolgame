@@ -38,7 +38,6 @@ function bestimmeFrage(callback) {
     		callback(erg);
     	}
     );
-    
 }
 
 module.exports.bestimmeFrage = bestimmeFrage;
