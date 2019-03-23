@@ -10,15 +10,15 @@
 <body>
     <h2>Spielereingabe</h2>
        <div id="Textfeld">
-           <form>
-               <input type="text">
+           <form action="http://mwegener.com:8040/spielereingabe" method="post">
+               <input type="text" name="spielername">
                <input type="submit" value="Hinzufügen">
            </form>
        </div> 
        <div id="liste">
             <ul>
             <% for (spieler of spielerarray) { %>
-            <li> <%= spieler.name%> 
+            <li> <%= spieler%> 
             <input type="button" value="X" onclick="alert('Spieler wird gelöscht')">
             </li>
             <% } %> 
