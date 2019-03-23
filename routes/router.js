@@ -6,6 +6,10 @@ router.get('/',function(req,res,next){
     res.render("dashboard");
 });
 
+router.get('/fragen',function(req,res,next){
+    res.render("quiz");
+});
+
 //404
 router.use(function(req,res,next){
     res.status = 404;
