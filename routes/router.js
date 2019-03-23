@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const quiz = require("./../models/quiz.js");
+const quiz = require("./../models/quiz");
 
 //Dashboard
 router.get('/',function(req,res,next){
@@ -9,7 +9,7 @@ router.get('/',function(req,res,next){
 
 router.get('/fragen',function(req,res,next){
     res.render("quiz",{
-        quizarr: quiz.inhalt
+        quizarr: quiz.bestimmeFrage
     });
 });
 
