@@ -19,6 +19,7 @@ function inhalt() {
     });
 
     console.log(fragen);
+    console.log("Test");
 
     return fragen;
 }
