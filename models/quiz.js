@@ -1,17 +1,30 @@
 const mysql = require("mysql");
 var con = mysql.createConnection({
     host: "localhost",
-    user: "dohackjs19",
+    user: "dohack19js",
     password: "vGMqKkBtI6XRbZhs",
-    database: "dohackjs19"
+    database: "dohack19js"
 });
 
-con.connect(function (err) {
-    if (err) throw err;
+function bestimmeFrage() {
+    con.connect(function (err) {
+        if (err) throw err;
+        console.log("Connected!");
+    });
+
+    var fragen = [];
     con.query("SELECT * FROM quiz", function (err, result, fields) {
         if (err) throw err;
-        console.log(fields);
+        fragen = fields;
     });
-});
 
-var fragen = [];
+    //var x = (Math.random() * (max - min)) + min;
+
+    console.log(fragen);
+    console.log("Test");
+
+    return fragen;
+}
+
+module.exports.bestimmeFrage = bestimmeFrage;
+
