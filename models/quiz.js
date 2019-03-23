@@ -27,5 +27,5 @@ function bestimmeFrage() {
     return fragen;
 }
 
-module.exports.bestimmeFrage = bestimmeFrage;
+module.exports.bestimmeFrage = bestimmeFrage();
 

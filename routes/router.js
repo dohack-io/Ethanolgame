@@ -7,6 +7,7 @@ router.get('/',function(req,res,next){
     res.render("dashboard");
 });
 
+//quiz
 router.get('/fragen',function(req,res,next){
     res.render("quiz",{
         quizarr: quiz.bestimmeFrage
