@@ -1,0 +1,52 @@
+main div{
+    display: flex;
+    border: 3px solid;
+    border-color: rgba(130, 247, 212, 0.501);
+    padding: 30px;
+    margin: 15px;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(130, 247, 212, 0.301);
+    font-size: 25px;
+}
+
+main div:hover{
+    background-color: rgba(130, 247, 212, 0.601);
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+div#content{
+    margin-top: 8vh;
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 480px){
+    main div{
+        width: 50px;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px){
+    main div{
+        width: 100px;
+        height: 100px;
+        font-size: 20px;
+    }
+}
