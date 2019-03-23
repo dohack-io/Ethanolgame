@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h2>Ich hab noch nie</h2>
+       <div id="Aussage">
+             <%= IchHabNochNie[0]%> 
+       </div> 
+       <div id="liste">
+           <form>
+            <% for (spieler of spielerarray) { %>
+            <input type="checkbox" id="<%= spieler.name%>" name="liste">
+            <label for="<%= spieler.name%>"> <%= spieler.name%> </label>   
+            <% } %> 
+            <input type="submit" value="Okay!">
+            </form>
+       </div>
+</body>
+</html>
