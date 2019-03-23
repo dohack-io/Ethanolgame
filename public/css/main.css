@@ -1,0 +1,43 @@
+main {
+    background-color: rgba(6, 53, 39, 0.582);
+}
+
+header {
+    background-color: rgba(134, 10, 10, 0.719);
+}
+
+h1{font-size: 30%;
+    font-style: Copperplate Gothic, regular }
+h2{font-size: 20%;
+   font-style: Copperplate Gothic, regular}
+
+*{
+    font-style: Candara, regular;
+    font-size: 10%
+}
+
+input[type="button"]{
+	display:inline-block;
+	margin:20px;
+	text-decoration:none;
+	font-family:Arial;
+	font-size:16px;
+	border:1px solid rgb(26, 17, 16);
+	border-radius:50%;
+	color:#fff;
+	background-color:rgb(114, 87, 82);
+	width:100px;
+	height:60px;
+	text-align:center;
+	vertical-align:middle;
+	padding-top:40px;
+	overflow:hidden;
+	font-weight:bold;
+	box-shadow:inset 3px 3px 4px rgb(80, 38, 32);
+	text-shadow:0px 0px 4px rgb(97, 54, 46);
+}
+.button6:hover{
+	background-color:rgb(70, 30, 24);
+	border-color:rgb(37, 26, 24);
+	box-shadow:inset 3px 3px 7px rgb(49, 30, 26);
+}
