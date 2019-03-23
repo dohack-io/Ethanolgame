@@ -6,6 +6,10 @@ var con = mysql.createConnection({
     database: "dohackjs19"
 });
 
+con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+  });
 
 var fragen = [];
 con.connect(function (err) {
