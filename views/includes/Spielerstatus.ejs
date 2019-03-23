@@ -1,0 +1,10 @@
+<aside>
+     <% for (spieler of spielerarray) { %>
+     <figure id="<%= spieler.name%>">
+      <img src="../../public/img/<%=spieler.bildURL%>.png" alt="Punktestand">
+           <figcaption>
+           <%= spieler.name%> 
+          </figcaption>
+     </figure>
+     <% } %> 
+</aside>

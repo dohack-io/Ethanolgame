@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Spielereingabe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h2>Spielereingabe</h2>
+       <div id="Textfeld">
+           <form>
+               <input type="text">
+               <input type="submit" value="Hinzufügen">
+           </form>
+       </div> 
+       <div id="liste">
+            <ul>
+            <% for (spieler of spielerarray) { %>
+            <li> <%= spieler.name%> 
+            <input type="button" value="X" onclick="alert('Spieler wird gelöscht')">
+            </li>
+            <% } %> 
+            </ul>
+       </div>
+</body>
