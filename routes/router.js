@@ -9,7 +9,7 @@ router.get('/',function(req,res,next){
 
 router.get('/fragen',function(req,res,next){
     res.render("quiz",{
-        quiz: quiz.inhalt
+        quizarr: quiz.inhalt
     });
 });
 
