@@ -18,6 +18,7 @@ function bestimmeFrage() {
         if (err) throw err;
         fragen = fields;
         console.log(fields);
+        console.log(result);
     });
 
     //var x = (Math.random() * (max - min)) + min;
