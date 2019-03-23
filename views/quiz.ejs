@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1><%= spieler[0]%> </h1>
+    <h2>Quiz</h2>
+       <div id="frage">
+             <%= quiz[0]%> 
+       </div> 
+       <div id="antworten">
+            <input type="button" value=" <%= quiz[1]%> " onclick="alert('You clicked the button!')">    
+            <input type="button" value=" <%= quiz[2]%> " onclick="alert('You clicked the button!')"> 
+            <input type="button" value=" <%= quiz[3]%> " onclick="alert('You clicked the button!')"> 
+            <input type="button" value=" <%= quiz[4]%> " onclick="alert('You clicked the button!')">       
+       </div>
+</body>
+</html>

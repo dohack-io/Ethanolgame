@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1><%= spieler[0]%> </h1>
+    <h2>Wahrheit</h2>
+       <div id="wahrheit">
+             <%= wahrheit[0]%> 
+       </div> 
+       <div id="auswahl">
+            <input type="button" value="beantwortet" onclick="alert('Punkt für Spieler1')">    
+            <input type="button" value="verweigert" onclick="alert('Punktabzug für Spieler1')">      
+       </div>
+</body>
+</html>
