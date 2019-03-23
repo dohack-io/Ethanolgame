@@ -19,7 +19,9 @@ function inhalt() {
     });
 
     console.log(fragen);
+
+    return fragen;
 }
 
-module.exports.inhalt = fragen;
+module.exports.inhalt = inhalt;
 
