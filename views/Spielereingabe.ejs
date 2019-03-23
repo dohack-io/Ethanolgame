@@ -20,6 +20,7 @@
     <div id="liste">
         <ul>
             <% for (spieler of spielerarray) { %>
+<<<<<<< HEAD
             <li> <%= spieler%></li>
             <% } %>
         </ul>
@@ -28,4 +29,13 @@
         <input type="submit" value="Alle Spieler löschen">
     </form>
     
+=======
+            <li> <%= spieler%> 
+            <input type="button" value="X" onclick="alert('Spieler wird gelöscht')">
+            </li>
+            <% } %> 
+            </ul>
+       </div>
+       <input type="button" value="Weiter gehts!" onclick="window.location.replace('http://mwegener.com:8040/Zwischenseite')">
+>>>>>>> a92bb1cc3b93764a40fe96a2814e0ccf8c28a81e
 </body>
