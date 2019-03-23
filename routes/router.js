@@ -57,8 +57,8 @@ router.get("/quiz", function (req, res, next) {
 
 //quiz-Antwort prüfen
 router.post("/quiz/antwortpruefen",function(req,res){
-    quiz.antwortpruefen(res.body.antwort);
-    
+    quiz.antwortpruefen(req.body.antwort);
+    spieler.bildsetzen();
     res.redirect("/zwischenseite");
 });
 

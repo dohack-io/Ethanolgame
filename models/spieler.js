@@ -95,5 +95,6 @@ module.exports.alleSpielerLoeschen = alleSpielerLoeschen;
 module.exports.gibAlleSpielerMitStatus = gibAlleSpielerMitStatus;
 module.exports.gibRandomSpieler = gibRandomSpieler;
 module.exports.spielerProSpielLoeschen = spielerProSpielLoeschen;
+module.exports.bildsetzen = bildsetzen;
 
 
