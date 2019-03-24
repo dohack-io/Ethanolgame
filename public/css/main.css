@@ -24,6 +24,6 @@ aside{
     background-color: rgba(201, 84, 84, 0.719);
     align-items: center;
 }
-main{
-    min-height: 500px;
+div{
+    min-height: 100px;
 }
