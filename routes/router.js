@@ -14,12 +14,15 @@ router.get('/', function (req, res, next) {
 //Zwischenseite
 router.get("/zwischenseite", function (req, res, next) {
     spieler.spielerProSpielLoeschen();
-    spieler.gibAlleSpielerMitStatus(function (erg) {
-        res.render("Zwischenseite", {
-            spielerarray: erg,
-            spielstatus: spiel.bestimmeSpielstatus()
+    spieler.bildsetzen(function(){
+        spieler.gibAlleSpielerAlsSpieler(function (erg) {
+            res.render("Zwischenseite", {
+                spielerarray: erg,
+                spielstatus: spiel.bestimmeSpielstatus()
+            })
         })
-    })
+    });
+    
 });
 
 
@@ -31,8 +34,8 @@ router.post("/spielereingabe", function (req, res, next) {
 
 
 router.get("/spielereingabe", function (req, res, next) {
-    spieler.gibAlleSpieler(function (erg) {
-        console.log(erg);
+    spieler.gibAlleSpielerNamen(function (erg) {
+        //console.log(erg);
         res.render("Spielereingabe", {
             spielerarray: erg
         });
@@ -58,7 +61,6 @@ router.get("/quiz", function (req, res, next) {
 //quiz-Antwort prüfen
 router.post("/quiz/antwortpruefen",function(req,res){
     quiz.antwortpruefen(req.body.antwort);
-    spieler.bildsetzen();
     res.redirect("/zwischenseite");
 });
 
@@ -66,7 +68,7 @@ router.post("/quiz/antwortpruefen",function(req,res){
 
 //Spielstatus Einzel
 router.get("/einzel", function (req, res, next) {
-    spieler.gibRandomSpieler(function(erg){
+    spieler.gibRandomSpielerEinzel(function(erg){
         res.render("Einzel/Einzelauswahl",{
             spieler: erg
         });

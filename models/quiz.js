@@ -7,19 +7,10 @@ const connection = mysql.createConnection({
 });
 
 function bestimmeFrage(callback) {
-    var fragen = [];
-    var spielerarr = [];
     var erg = [];
 
-    connection.query("SELECT Name FROM spieler", function (err, result) {
-        if (err) throw err;
-        ///console.log(result);
-        spielerarr = result;
-        var x = (Math.floor(Math.random() * (spielerarr.length)));
-        //console.log("X Wert Spieler: " + x);
-        //console.log(spieler[x]);
-        //console.log(spielerarr[x].Name);
-        erg[0] = spielerarr[x].Name;
+    connection.query("SELECT name FROM spieler JOIN spiel_spieler ON spieler.id=spiel_spieler.idspieler", function (err, result) {
+        erg[0] = result[0].name;
     });
 
     connection.query(
@@ -46,18 +37,26 @@ function antwortpruefen(antwort) {
     connection.query("SELECT richtig FROM quiz WHERE aktiv = 1", function (err, result) {
         connection.query("SELECT idspieler from spiel_spieler", function (err, resultid) {
             console.log(resultid);
-            connection.query("SELECT punkte FROM spieler WHERE id = " + resultid.id, function (err, resultpunkte) {
-                console.log(resultpunkte);
-                if (result.richtig == antwort) {
+            connection.query("SELECT punkte FROM spieler WHERE id = " + resultid[0].idspieler, function (err, resultpunkte) {
+                let rsp = resultpunkte[0].punkte +1;
+                let rsm = resultpunkte[0].punkte -1;
+
+                console.log(result);
+                console.log(result[0].richtig);
+                console.log(antwort);
+                if (result[0].richtig == antwort) {
+                    console.log("Punkte für " + resultid[0].idspieler + " erhöht");
                     connection.query(
-                        "UPDATE spieler SET punkte =" + resultpunkte.punkte + 1 + " WHERE id =" + resultid);
+                        "UPDATE spieler SET punkte = " + rsp + " WHERE id = (?) ",resultid[0].idspieler);
                 }
                 else {
-                    if (resultpunkte.punkte != 0) {
+                    if (resultpunkte[0].punkte != 0) {
+                        console.log("Punkte für " + resultid[0].idspieler + " verringert");
                         connection.query(
-                            "UPDATE spieler SET punkte =" + resultpunkte.punkte - 1 + " WHERE id ="+ resultid);
+                            "UPDATE spieler SET punkte =" + rsm + " WHERE id = "+ resultid[0].idspieler);
                     }
                 }
+                connection.query("UPDATE quiz SET aktiv = 0 WHERE aktiv = 1");
             })
         })
 

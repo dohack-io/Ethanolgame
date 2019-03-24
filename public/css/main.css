@@ -12,7 +12,7 @@ main {
 }
 
 figcaption{
-    font-size: 2em;
+    font-size: 3em;
     font-style: Candara, regular;
 }
 header {
@@ -32,9 +32,9 @@ aside{
 }
 
 
-h1{font-size: 3em;
+h1{font-size: 4em;
     font-style: Copperplate Gothic, regular }
-h2{font-size: 2em;
+h2{font-size: 3em;
    font-style: Copperplate Gothic, regular}
 
 *{
@@ -45,13 +45,13 @@ h2{font-size: 2em;
 input[type="button"]{
 	display:inline-block;
 	margin:20px;
-	font-size:1em;
+	font-size:2em;
 	border:1px solid rgb(26, 17, 16);
 	border-radius:50%;
-	color:rgb(102, 15, 15);
-	background-color:rgb(114, 87, 82);
-	width:4vw;
-	height:4vh;
+	color:rgb(20, 18, 18);
+	background-color:rgb(77, 104, 71);
+	width:8vw;
+	height:8vh;
 	text-align:center;
 	padding-top:2%;
 	overflow:hidden;
