@@ -1,20 +1,28 @@
 body {
+display:grid;
+grid-template-areas:"glaeser"
+               "oben"
+             "haupt";
+grid-template-rows: 20% 40% 40%;
   margin: 0;
   padding: 0;
   font-family: monospace;
   font-size: 1em;
-  background-color: rgba(134, 52, 52, 0.719)
+  background-color: rgba(134, 52, 52, 0.719);
+  color: rgba(107, 4, 4, 0.719)
 }
 h1{font-size: 2em;
     font-style: comic }
 h2{font-size: 1.5em;
    font-style: comic}
-   
+
 div{
     min-height: 100px;
 }
+main{grid-area: haupt;}
 
 header {
+    grid-area: oben;
     display:flex;
     justify-content: space-evenly;
     background-color: rgba(134, 10, 10, 0.719);
@@ -22,7 +30,9 @@ header {
     border:3% solid rgb(53, 9, 4);
 }
 aside{
-    border: solid 10px;
+    grid-area: glaeser;
+    border-bottom: solid 10px;
+    border-top: solid 10px;
     display:flex;
     justify-content: space-evenly;
     background-color: rgba(201, 84, 84, 0.719);
