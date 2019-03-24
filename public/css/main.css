@@ -38,7 +38,7 @@ h2{font-size: 20%;
 
 *{
     font-style: Candara, regular;
-    font-size: 10%
+    font-size: 5*(vw+vh);
 }
 
 input[type="button"]{
@@ -49,10 +49,9 @@ input[type="button"]{
 	border-radius:50%;
 	color:rgb(102, 15, 15);
 	background-color:rgb(114, 87, 82);
-	width:40%;
-	height:30%;
+	width:4vw;
+	height:4vh;
 	text-align:center;
-	vertical-align:middle;
 	padding-top:2%;
 	overflow:hidden;
 	box-shadow:inset 3px 3px 4px rgb(80, 38, 32);
