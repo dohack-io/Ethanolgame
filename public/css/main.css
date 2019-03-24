@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     height: 100%;
+    background-color: rgba(116, 9, 9, 0.719);
 }
 main {
     display:flex;
