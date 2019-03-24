@@ -92,7 +92,7 @@ function spielerProSpielLoeschen() {
 function bildsetzen(callback) {
     //console.log("bilder setzen");
     gibAlleSpielerAlsSpieler(function (erg) {
-        //console.log(erg);
+        console.log(erg);
         erg.forEach(element => {
             connection.query("SELECT punkte FROM spieler WHERE id =" + element.id , function (err, resultpunkte) {
                 switch (resultpunkte[0].punkte) {
@@ -118,8 +118,13 @@ function bildsetzen(callback) {
                         break;
                 }
             });
+            console.log("before end");
         })
-        callback();
+        console.log("sdasd");
+        setTimeout(function(){
+            callback(erg);
+        },200);
+        
     })
 
 }

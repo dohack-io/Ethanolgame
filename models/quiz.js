@@ -27,23 +27,18 @@ function bestimmeFrage(callback) {
             erg[4] = result[y].aw3;
             erg[5] = result[y].aw4;
 
-            //console.log(erg);
             callback(erg);
         }
     );
 }
 
-function antwortpruefen(antwort) {
+function antwortpruefen(antwort, callback) {
     connection.query("SELECT richtig FROM quiz WHERE aktiv = 1", function (err, result) {
         connection.query("SELECT idspieler from spiel_spieler", function (err, resultid) {
-            console.log(resultid);
             connection.query("SELECT punkte FROM spieler WHERE id = " + resultid[0].idspieler, function (err, resultpunkte) {
                 let rsp = resultpunkte[0].punkte +1;
                 let rsm = resultpunkte[0].punkte -1;
-
-                console.log(result);
-                console.log(result[0].richtig);
-                console.log(antwort);
+                console.log("punkte setzen");
                 if (result[0].richtig == antwort) {
                     console.log("Punkte für " + resultid[0].idspieler + " erhöht");
                     connection.query(
@@ -57,6 +52,10 @@ function antwortpruefen(antwort) {
                     }
                 }
                 connection.query("UPDATE quiz SET aktiv = 0 WHERE aktiv = 1");
+                setTimeout(function(){
+                    callback();
+                },300)
+             
             })
         })
 
