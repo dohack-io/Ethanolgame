@@ -1,6 +1,6 @@
 main {
     display:flex;
-    background-color: rgba(6, 53, 39, 0.582);
+    background-color: rgba(116, 9, 9, 0.719);
     align-items: center;
     justify-content: space-evenly;
 }
@@ -11,6 +11,7 @@ header {
     justify-content: space-evenly;
     background-color: rgba(134, 10, 10, 0.719);
     align-items: center;
+    border-bottom:15px solid rgb(53, 9, 4);
 }
 
 h1{font-size: 30%;
