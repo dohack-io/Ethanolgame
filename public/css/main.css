@@ -6,7 +6,6 @@ body {
 }
 main {
     display:flex;
-    background-color: rgba(116, 9, 9, 0.719);
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
