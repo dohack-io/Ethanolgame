@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Wahrheit</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
 </head>
+
 <body>
     <header>
-    <h1><%= spieler%> </h1>
-    <h2>Wahrheit</h2>
-       <div id="wahrheit">
-            <p> <%= wahrheit[0]%> </p> 
-       </div> 
+        <h1><%= spieler%> </h1>
+        <h2>Wahrheit</h2>
     </header>
     <main>
-       <div id="auswahl">
-            <input type="button" value="beantwortet" onclick="alert('Punkt für Spieler1')">    
-            <input type="button" value="verweigert" onclick="alert('Punktabzug für Spieler1')">      
-       </div>
+        <div id="wahrheit">
+            <p> <%= wahrheit[0]%> </p>
+        </div>
+        <div id="auswahl">
+            <input type="button" value="beantwortet" onclick="alert('Punkt für Spieler1')">
+            <input type="button" value="verweigert" onclick="alert('Punktabzug für Spieler1')">
+        </div>
     </main>
 </body>
+
 </html>

@@ -9,31 +9,31 @@
 
 <body>
     <header>
-    <h1><%= quiz[0]%> </h1>
-    <h2>Quiz</h2>
-    <div id="frage">
-        <p> <%= quiz[1]%> </p>
-    </div>
+        <h1><%= quiz[0]%> </h1>
+        <h2>Quiz</h2>
     </header>
     <main>
-    <div id="antworten">
-        <form method="POST" action="http://mwegener.com:8040/quiz/antwortpruefen">
-            <input type="submit" value="<%= quiz[2]%>">
-            <input type="text" name="antwort" value="<%= quiz[2]%>" hidden>
-        </form>
-        <form method="POST" action="http://mwegener.com:8040/quiz/antwortpruefen">
-            <input type="submit" value="<%= quiz[3]%>">
-            <input type="text" name="antwort" value="<%= quiz[3]%>" hidden>
-        </form>
-        <form method="POST" action="http://mwegener.com:8040/quiz/antwortpruefen">
-            <input type="submit" value="<%= quiz[4]%>">
-            <input type="text" name="antwort" value="<%= quiz[4]%>" hidden>
-        </form>
-        <form method="POST" action="http://mwegener.com:8040/quiz/antwortpruefen">
-            <input type="submit" value="<%= quiz[5]%>">
-            <input type="text" name="antwort" value="<%= quiz[5]%>" hidden>
-        </form>
-    </div>
+        <div id="frage">
+            <p> <%= quiz[1]%> </p>
+        </div>
+        <div id="antworten">
+            <form method="POST" action="http://mwegener.com:8040/quiz/antwortpruefen">
+                <input type="submit" value="<%= quiz[2]%>">
+                <input type="text" name="antwort" value="<%= quiz[2]%>" hidden>
+            </form>
+            <form method="POST" action="http://mwegener.com:8040/quiz/antwortpruefen">
+                <input type="submit" value="<%= quiz[3]%>">
+                <input type="text" name="antwort" value="<%= quiz[3]%>" hidden>
+            </form>
+            <form method="POST" action="http://mwegener.com:8040/quiz/antwortpruefen">
+                <input type="submit" value="<%= quiz[4]%>">
+                <input type="text" name="antwort" value="<%= quiz[4]%>" hidden>
+            </form>
+            <form method="POST" action="http://mwegener.com:8040/quiz/antwortpruefen">
+                <input type="submit" value="<%= quiz[5]%>">
+                <input type="text" name="antwort" value="<%= quiz[5]%>" hidden>
+            </form>
+        </div>
     </main>
 </body>
 
