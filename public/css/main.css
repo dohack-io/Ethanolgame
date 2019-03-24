@@ -9,6 +9,10 @@ h1{font-size: 2em;
     font-style: comic }
 h2{font-size: 1.5em;
    font-style: comic}
+   
+div{
+    min-height: 100px;
+}
 
 header {
     display:flex;
@@ -23,7 +27,4 @@ aside{
     justify-content: space-evenly;
     background-color: rgba(201, 84, 84, 0.719);
     align-items: center;
-}
-div{
-    min-height: 100px;
 }
